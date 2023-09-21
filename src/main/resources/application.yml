@@ -1,0 +1,21 @@
+# NOTACION YAML PARA LA CREACION DE ATRIBUTOS PARA VARIOS ASPECTOS
+# CONEXION A LA BBDD
+# COMUNICACION CON HIBERNATE
+# PUERTO DE SALIDA DE LA APLICACION
+# Y OTROS ASPECTOS
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://192.168.83.128:5432/prueba-db
+    username: sqluser
+    password: D3v310p34202x-GD
+  jpa:
+    show-sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+    generate-ddl: true
+    hibernate:
+      ddl-auto:create
+server:
+  port: 9090
