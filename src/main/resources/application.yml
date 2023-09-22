@@ -16,6 +16,19 @@ spring:
     open-in-view: false
     generate-ddl: true
     hibernate:
-      ddl-auto:create
+      ddl-auto: none
 server:
   port: 9090
+#SWAGGER
+springdoc:
+  packages-to-scan: 'com.blumbit.web.api.appgradle.controller'
+logging:
+  pattern:
+    console: "%d{dd-MM-yyyy HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"
+    file: "%d{dd-MM-yyyy HH:mm:ss.SSS} %p %c{1.} [%t] %m%n"
+  level:
+    org.springframework.web: ERROR
+    com.blumbit.web.api.appgradle: DEBUG
+    org.hibernate: ERROR
+  file:
+    name: app-personas.log
